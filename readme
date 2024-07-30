@@ -1,5 +1,52 @@
 Raydium Volume bot
 
+
+----------------------------------------- 1: Buy Modes -------------------------------------------
+V: Gen Volume (JITO): Enter token address (CA) and delay when prompted, this mode will bundle upto 10 wallets buying the token until every wallet has bought once.
+
+A: Auto Volume (JITO):  This mode is unique, it will monitor the dev address from the config, and once it detects a new pump.fun launch it will automatically run the new human mode for generating volume. Human mode works like so:  Buy Buy Sell| Buy Buy Sell| Buy Buy Sell| Buy Buy Sell 
+until every wallet has bought & sold, then it will restart until you either close the application or crtl + c quit the application.
+
+H: Human Mode (JITO): Enter token address (CA) and delay when prompted. Human mode works like so:  
+Buy Buy Sell| Buy Buy Sell| Buy Buy Sell| Buy Buy Sell 
+until every wallet has bought & sold, then it will restart until you either close the application or crtl + c quit the application.
+
+M: MicroBuy (SPAM):  Enter token address (CA) and delay when prompted. This mode will spam buy TX's with a little amount of SOL based on the config value, without JITO indefinitly until u close the application or ctrl + c to quit. 
+
+S: Same TX: Enter token address (CA), buy amount & delay when prompted. This mode will use THE FIRST WALLET inside wallet.txt and spam (non JITO) TX's buying & selling your token in the same TX, hit "x" and enter key to kill the infinite loop and return to main menu at any time
+
+X: Back to Main Menu: Enter X to return to main menu
+
+----------------------------------------- 2: Sell Modes -------------------------------------------
+S: Sell All (JITO): This mode will bundle all the wallets and sell 100% of the tokens in each wallet until every wallet has sold.
+
+SS: Single Sell: This mode will prompt you to enter the token address (CA) and to enter the (index) of the wallet you want to sell. It will then sell 100% of tokens in that wallet
+
+X: Back to Main Menu: Enter X to return to main menu
+
+----------------------------------------- 3: Wallet Modes -------------------------------------------
+
+W: Gen Wallets: Generates wallets based on the amount entered when prompted, stores them in /keypairs folder along with wallets.txt
+
+B: Check Balances: Checks the SOL & SPL Token balance of every wallet
+
+C: Close Token Accounts: Closes SPL Token Accounts of each wallet reclaiming the rent fees
+
+P: Create Profiles: Creates profiles on Pump.Fun (Username + Bio)
+
+X: Back to Main Menu: Returns to main menu
+
+----------------------------------------- 4: Transfer Modes -------------------------------------------
+
+V: This mode will transfer SOL from ur main wallet (Sender from config file) to EVERY sub wallet you have in wallets.txt/keyapirs directory
+
+R: This mode will send SOL from every VOLUME/SUB wallet back to the desired MAIN wallet address (NOTE 0.0009 SOL)  will remain in every wallet you will need to manually send this back if u want it
+
+S: This mode will send 100% of the token balance in the VOLUME/SUB wallets to the wallet address you provided when running!
+
+Q: Quit:  Quits the application
+
+
 Now supporting pump.fun pools and Raydium Concentrated Liquidity
 Automatic Distribution
 Everything from keypairs, wallet checks, and SOL retrieval operations are automated.
